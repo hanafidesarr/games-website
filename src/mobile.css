@@ -1,0 +1,55 @@
+html,body,#root{max-width:100%;overflow-x:hidden}
+.search-box svg{flex:0 0 auto}
+.category-scroll{scrollbar-width:none}
+.category-scroll::-webkit-scrollbar{display:none}
+@media(max-width:680px){
+  .site-header{padding-inline:12px}
+  .brand{gap:7px;font-size:13px}
+  .brand .logo-mark{flex:0 0 29px}
+  .header-actions{min-width:0;flex:1}
+  .search-box{min-width:0;padding-inline:10px}
+  .search-box input{font-size:13px}
+  .desktop-nav{z-index:20;box-shadow:0 18px 35px rgba(0,0,0,.35)}
+  .hero{width:auto;margin-inline:10px;height:438px}
+  .hero-content{padding:42px 22px}
+  .hero h1{font-size:clamp(35px,11vw,42px);letter-spacing:-1.5px}
+  .hero-copy{line-height:1.45}
+  .hero-actions{width:min(100%,280px);flex-direction:column;gap:10px}
+  .hero-actions .button{width:100%;min-height:46px}
+  .hero-character{left:auto;right:18%;bottom:30px;transform:scale(.72)}
+  .sun{right:14%;top:37%}
+  .category-shell{margin-inline:12px}
+  .category-scroll{padding:5px}
+  .category-pill{min-height:42px}
+  .content-section{margin-inline:12px;padding-top:20px;padding-bottom:26px}
+  .section-heading{gap:12px;margin-bottom:13px}
+  .section-heading>div{min-width:0}
+  .section-heading h2{font-size:21px}
+  .section-heading .eyebrow{font-size:9px;letter-spacing:1.5px;white-space:nowrap}
+  .view-all{flex:0 0 auto}
+  .game-card{border-radius:13px}
+  .game-art{height:150px}
+  .game-info{min-height:66px;padding:11px 12px}
+  .game-info h3{font-size:14px}
+  .play-button{width:36px;height:36px;flex-basis:36px}
+  .catalog-heading{display:flex;align-items:flex-start;flex-direction:column;gap:12px}
+  .sort-select{margin-top:0;width:100%;display:flex;align-items:center;justify-content:space-between}
+  .sort-select select{margin-left:8px;flex:1;max-width:190px}
+  .play-page{min-height:calc(100vh - 150px);padding:28px 14px}
+  .launch-panel{border-radius:14px}
+  .modal-art{height:170px}
+  .launch-copy{padding:20px 18px 24px}
+  .launch-copy h1{font-size:28px}
+  .launch-copy .button{width:100%;min-height:46px}
+  footer .brand{justify-content:center}
+}
+@media(max-width:380px){
+  .hero{height:455px}
+  .hero-content{padding-inline:18px}
+  .hero h1{font-size:34px}
+  .eyebrow{letter-spacing:2.5px}
+  .hero-character{right:12%;transform:scale(.62)}
+  .section-heading h2{font-size:19px}
+  .view-all{font-size:11px}
+  .game-art{height:135px}
+}
