@@ -7,9 +7,8 @@ import { Hero } from './components/Hero'
 import { CategoryBar } from './components/CategoryBar'
 import { GameSection } from './components/Section'
 import { GameArt } from './components/GameArt'
-import catLogo from '../logo-catbox.png'
 
-function Footer() { return <footer><div className="brand"><img className="brand-image" src={catLogo} alt="Catbox Studio" /><span>Catbox <b>Studio</b></span></div><p>Original browser games by Catbox Studio.</p><span>© 2026 Catbox Studio</span></footer> }
+function Footer() { return <footer><div className="brand"><img className="brand-image" src="/logo-catbox.png" alt="Catbox Studio" /><span>Catbox <b>Studio</b></span></div><p>Original browser games by Catbox Studio.</p><span>© 2026 Catbox Studio</span></footer> }
 
 function Home() {
   const [category, setCategory] = useState('All Games'); const [query, setQuery] = useState(''); const [sort, setSort] = useState('featured')

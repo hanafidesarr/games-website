@@ -9,7 +9,7 @@ html,body,#root{max-width:100%;overflow-x:hidden}
 .collection-note p:not(.eyebrow){margin:0;color:var(--muted);font-size:13px}
 .detail-random{margin-left:10px}
 .search-box svg{flex:0 0 auto}
-.brand-image{width:40px;height:40px;display:block;object-fit:contain;border-radius:10px}
+.brand-image{width:40px;height:40px;display:block;object-fit:contain;border-radius:0}
 .category-scroll{scrollbar-width:none}
 .category-scroll::-webkit-scrollbar{display:none}
 @media(max-width:680px){
