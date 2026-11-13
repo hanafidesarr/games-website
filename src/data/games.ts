@@ -1,7 +1,14 @@
-export type GameCategory = 'Action' | 'Adventure' | 'Puzzle' | 'Arcade' | 'Simulation' | 'Strategy' | 'Casual' | 'Racing' | 'Multiplayer'
-export type Game = { id: string; title: string; category: GameCategory; subcategory: string; art: string; featured: boolean; releaseDate: string; description: string; gameUrl: string }
-const rawGames: Array<[string,string,GameCategory,string,string,boolean,string,string]> = [
-  ['forest-escape','Forest Escape','Adventure','Survival','forest',true,'2026-10-04','Find your way through the moonlit wilds before the forest wakes up.'], ['retro-racing','Retro Racing','Racing','Arcade','racing',true,'2026-10-18','Neon nights, tight corners, and classic arcade speed.'], ['paper-boat','Paper Boat','Arcade','Relaxing','boat',true,'2026-09-21','Guide a tiny paper boat across a sky-blue world of ripples.'], ['chess-duel','Chess Duel','Strategy','Board','chess',true,'2026-08-29','A clean, cinematic chess duel for sharp minds.'], ['wildfire-rescue','Wildfire Rescue','Action','Mission','wildfire',true,'2026-10-27','Race the clock and protect the valley from the flames.'], ['block-puzzle','Block Puzzle','Puzzle','Classic','blocks',false,'2026-11-01','Stack bright shapes, clear lines, and chase a new high score.'], ['fishing-time','Fishing Time','Simulation','Casual','fishing',false,'2026-10-12','Slow down, cast a line, and enjoy a perfect sunset.'], ['space-survival','Space Survival','Arcade','Action','space',false,'2026-09-11','Dodge asteroids and keep your tiny ship in the stars.'], ['garden-keeper','Garden Keeper','Simulation','Casual','garden',false,'2026-08-14','Grow a little garden and make every corner bloom.'], ['tower-tactics','Tower Tactics','Strategy','Defense','tower',false,'2026-07-26','Build, defend, and outsmart the next incoming wave.'], ['pixel-pals','Pixel Pals','Multiplayer','Party','pals',false,'2026-07-09','Quick rounds and friendly chaos for your whole crew.'], ['canyon-run','Canyon Run','Racing','Adventure','canyon',false,'2026-06-30','Take the scenic route and chase the golden horizon.']
+import chessImage from '../../Kingdom Chess Emblem.png'
+import boatImage from '../../Little Paper Boat in the Sunlit Stream.png'
+import monsterImage from '../../Pocong in the Pixelated Corridor.png'
+
+export type GameCategory = 'Action' | 'Adventure' | 'Puzzle' | 'Arcade' | 'Strategy'
+export type Game = { id: string; title: string; category: GameCategory; subcategory: string; image: string; featured: boolean; releaseDate: string; description: string; gameUrl: string }
+
+export const games: Game[] = [
+  { id: 'kingdom-chess', title: 'Kingdom Chess', category: 'Strategy', subcategory: 'Board', image: chessImage, featured: true, releaseDate: '2026-11-01', description: 'Challenge your mind in a polished kingdom-inspired chess experience built by Catbox Studio.', gameUrl: 'http://chess.axeonsoft.com/' },
+  { id: 'little-paper-boat', title: 'Little Paper Boat', category: 'Adventure', subcategory: 'Relaxing', image: boatImage, featured: true, releaseDate: '2026-10-20', description: 'Set sail through a warm, sunlit stream in a gentle adventure made by Catbox Studio.', gameUrl: 'http://little-paper-boat.axeonsoft.com/' },
+  { id: 'monster-dumb', title: 'Monster Dumb', category: 'Action', subcategory: 'Pixel Horror', image: monsterImage, featured: true, releaseDate: '2026-10-08', description: 'Step into a strange pixelated corridor and survive the unforgettable world of Monster Dumb by Catbox Studio.', gameUrl: 'http://monster-dumb.axeonsoft.com/' },
 ]
-export const games: Game[] = rawGames.map(([id,title,category,subcategory,art,featured,releaseDate,description]) => ({ id,title,category,subcategory,art,featured,releaseDate,description,gameUrl:`/play/${id}` }))
-export const categories = ['All Games','Action','Adventure','Puzzle','Arcade','Simulation','Strategy','Casual','Racing','Multiplayer'] as const
+
+export const categories = ['All Games', 'Action', 'Adventure', 'Strategy'] as const

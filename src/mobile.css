@@ -1,11 +1,22 @@
 html,body,#root{max-width:100%;overflow-x:hidden}
+.game-art{background-position:center;background-size:cover;background-repeat:no-repeat}
+.game-art img{display:block;width:100%;height:100%;object-fit:cover}
+.game-art:before{background:linear-gradient(180deg,transparent 45%,rgba(5,7,15,.45))}
+#all-games .game-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+.collection-note{padding-top:0}
+.collection-note-inner{display:flex;align-items:center;justify-content:space-between;gap:24px;padding:22px 24px;border:1px solid var(--line);border-radius:16px;background:linear-gradient(120deg,rgba(25,29,46,.85),rgba(17,20,34,.72))}
+.collection-note h2{margin:0 0 8px;font-size:24px}
+.collection-note p:not(.eyebrow){margin:0;color:var(--muted);font-size:13px}
+.detail-random{margin-left:10px}
 .search-box svg{flex:0 0 auto}
+.brand-image{width:40px;height:40px;display:block;object-fit:contain;border-radius:10px}
 .category-scroll{scrollbar-width:none}
 .category-scroll::-webkit-scrollbar{display:none}
 @media(max-width:680px){
   .site-header{padding-inline:12px}
   .brand{gap:7px;font-size:13px}
   .brand .logo-mark{flex:0 0 29px}
+  .brand-image{width:32px;height:32px}
   .header-actions{min-width:0;flex:1}
   .search-box{min-width:0;padding-inline:10px}
   .search-box input{font-size:13px}
@@ -28,6 +39,7 @@ html,body,#root{max-width:100%;overflow-x:hidden}
   .section-heading .eyebrow{font-size:9px;letter-spacing:1.5px;white-space:nowrap}
   .view-all{flex:0 0 auto}
   .game-card{border-radius:13px}
+  #all-games .game-grid{grid-template-columns:1fr}
   .game-art{height:150px}
   .game-info{min-height:66px;padding:11px 12px}
   .game-info h3{font-size:14px}
@@ -41,6 +53,9 @@ html,body,#root{max-width:100%;overflow-x:hidden}
   .launch-copy{padding:20px 18px 24px}
   .launch-copy h1{font-size:28px}
   .launch-copy .button{width:100%;min-height:46px}
+  .detail-random{margin:10px 0 0;width:100%}
+  .collection-note-inner{align-items:stretch;flex-direction:column;padding:19px}
+  .collection-note h2{font-size:20px}
   footer .brand{justify-content:center}
 }
 @media(max-width:380px){
@@ -52,4 +67,13 @@ html,body,#root{max-width:100%;overflow-x:hidden}
   .section-heading h2{font-size:19px}
   .view-all{font-size:11px}
   .game-art{height:135px}
+}
+
+@media(max-width:680px){
+  .site-header{width:100%;margin:0;padding-inline:14px}
+  .hero{width:100%;margin:0;border-radius:0 0 18px 18px}
+  .category-shell{width:100%;margin:0;padding:12px}
+  .content-section{width:100%;margin:0;padding-inline:12px}
+  .collection-note{padding-inline:12px}
+  footer{width:100%;padding-inline:14px}
 }
